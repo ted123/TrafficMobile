@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<title>Cebu Traffic Advisory</title>
+		<link rel='stylesheet' href='stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='stylesheets/flat-ui.css' />
+		<link rel='stylesheet' href='stylesheets/style.css' />
+    <link type="text/css" rel="stylesheet" href="stylesheets/jquery.mmenu.css" />
+    <link type="text/css" rel="stylesheet" href="stylesheets/jquery.mmenu.positioning.css" />
+
+    <script type="text/javascript" src="javascripts/jquery.js"></script>
+    <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.mmenu.min.js"></script>
+		<script type="text/javascript" src="javascripts/MapHandler.js"></script>
+    <script type="text/javascript" src="javascripts/Route.js"></script>
+		<script type="text/javascript" src="javascripts/script.js"></script>
+    <script type="text/javascript" src="javascripts/localstorage.js"></script>
+	</head>
+	<body>
+    <div id="page">    
+      <div id="traffix-nav" class="navbar navbar-inverse">
+        <div class="navbar-header page-links">
+          <a href="#menu" id="menu-bars" class="bars visible-xs"></a>
+          <a href="#" data-page='map' class="navbar-brand sprite logo">...</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-collapse-01 page-links">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="#" data-page='map'><span class="menu-icon glyphicon glyphicon-globe"></span>Map View<span class="navbar-unread">.</span></a>
+            </li>
+            <li><a href="#" data-page='routes'><span class="menu-icon glyphicon glyphicon-road"></span>Routes<span class="navbar-unread">.</span></a></li>
+            <li id="acctOptions1"></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="#" data-page='help'><span class="menu-icon glyphicon glyphicon-question-sign"></span>Help</a></li>
+          </ul>
+          <div class="navbar-right nav-custom">
+            <a href="#" data-page='options' class="btn btn-primary nav-custom-text" id="acctStatus" onClick="logout()"><span class="menu-icon glyphicon glyphicon-user"></span>Login</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="traffix-content" class="wrapper">
+  		  <div id="page-container">
+          <a href="#" class="btn btn-info" id="change_live_url">Change LIVE_URL</a>
+        </div>
+        <div id="loading">
+          <img src="images/loading.gif" />
+          <div id="yellow-box" style="position: fixed; right: 0; width:10px;height: 10px;background: lightgray;"></div>
+        </div>
+
+      </div>
+
+      <nav id="menu" class="page-links">
+        <ul>
+          <li class="titled"><p class="sprite logo" style="margin: 0 auto;">...</p></li>
+          <li><a href="/" data-page='map'><span class="menu-icon glyphicon glyphicon-globe"></span>Map View</a></li>
+          <li><a href="/routes" data-page='routes'><span class="menu-icon glyphicon glyphicon-road"></span>Routes</a></li>
+          <li id="acctOptions"></li>
+          <li><a href="/help" data-page='help'><span class="menu-icon glyphicon glyphicon-question-sign"></span>Help</a></li>
+          <li><a href="/options" data-page='options'class="btn btn-primary nav-custom-text" id="status_1" onclick="logout()"><span class="menu-icon glyphicon glyphicon-user"></span>Login</a></li>
+        </ul>
+      </nav>
+    </div>  
+	</body>
+</html>
